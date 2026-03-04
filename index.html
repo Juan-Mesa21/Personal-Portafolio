@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan M. | Portfolio - Python Student</title>
+    <meta name="description" content="A premium student portfolio website featuring interactive Python exercises and glassmorphism design.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <div class="container">
+        <!-- Profile Section -->
+        <header class="profile-card glass floating">
+            <div class="profile-img-container">
+                <img src="./profile_placeholder.png" alt="Profile" id="profile-img" class="profile-img">
+            </div>
+            <div class="profile-info">
+                <h1 id="pName" contenteditable="true" spellcheck="false">Juan M.</h1>
+                <p class="grade" id="pGrade" contenteditable="true" spellcheck="false">12th Grade Student & Aspiring Developer</p>
+                <p class="intro">Welcome to my Python exercise repository. Explore my interactive projects below.</p>
+            </div>
+        </header>
+
+        <h2 class="section-title">Interactive Exercises</h2>
+        
+        <!-- Exercises Grid -->
+        <main class="project-grid">
+            <!-- Fibonacci Card -->
+            <section class="project-card glass">
+                <h3>01. Fibonacci Sequence</h3>
+                <p>Calculate the first 'n' terms of the Fibonacci sequence using my custom Python algorithm translated for the web.</p>
+                
+                <div class="fib-container">
+                    <div class="fib-input-group">
+                        <input type="number" id="fib-n" min="1" max="1000" value="5" placeholder="n">
+                        <button id="fib-btn">Generate</button>
+                    </div>
+                    <div class="fib-result" id="fib-result">
+                        [0, 1, 1, 2, 3]
+                    </div>
+                </div>
+
+                <div class="code-header">
+                    <span>Source: main.py</span>
+                    <span>PYTHON</span>
+                </div>
+                <div class="code-display">
+                    <pre><code>def get_fibonacci_sequence(n):
+    if n <= 0: return []
+    elif n == 1: return [0]
+    
+    seq = [0, 1]
+    while len(seq) < n:
+        next_val = seq[-1] + seq[-2]
+        seq.append(next_val)
+    return seq</code></pre>
+                </div>
+            </section>
+
+            <!-- Placeholder Cards -->
+            <section class="project-card glass" style="opacity: 0.7;">
+                <h3>02. Binary Search</h3>
+                <p>An upcoming interactive visualization of recursive binary searching algorithms.</p>
+                <div style="height: 100px; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px dashed var(--glass-border);">
+                    <span>Locked</span>
+                </div>
+            </section>
+
+            <section class="project-card glass" style="opacity: 0.7;">
+                <h3>03. Sorting Visualizer</h3>
+                <p>A planned module to showcase Bubble, Selection, and Insertion sorts.</p>
+                <div style="height: 100px; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px dashed var(--glass-border);">
+                    <span>Locked</span>
+                </div>
+            </section>
+        </main>
+
+        <footer style="text-align: center; margin-top: 4rem; color: var(--text-secondary); opacity: 0.5;">
+            <p>&copy; 2024 Juan M. - 12th Grade Portfolio</p>
+        </footer>
+    </div>
+
+    <!-- Particle Engine (using a lightweight library approach) -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
